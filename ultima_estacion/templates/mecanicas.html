@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecánicas - La Última Estación</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>La Última Estación</h1>
+        <nav>
+            <a href="{% url 'inicio' %}">Inicio</a>
+            <a href="{% url 'mecanicas' %}">Mecánicas</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="presentacion">
+            <h2>Mecánicas del juego</h2>
+            <p>El objetivo es sobrevivir tres minutos y mantener funcionando el generador hasta que llegue el tren de rescate.</p>
+        </section>
+
+        <section>
+            <h2>Controles</h2>
+            <ul>
+                <li><strong>W, A, S, D:</strong> mover al personaje.</li>
+                <li><strong>Clic izquierdo o espacio:</strong> disparar.</li>
+                <li><strong>E:</strong> recoger objetos del suelo.</li>
+                <li><strong>F:</strong> agregar gasolina al generador.</li>
+                <li><strong>R:</strong> reparar el generador usando chatarra.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>¿Qué hay que hacer?</h2>
+            <ol>
+                <li>Explorar la estación y buscar gasolina y chatarra.</li>
+                <li>Usar la gasolina para mantener encendido el generador.</li>
+                <li>Repararlo cuando esté dañado.</li>
+                <li>Evitar o combatir a las criaturas que salen de la oscuridad.</li>
+                <li>Resistir los tres minutos hasta que llegue el tren.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Victoria y derrota</h2>
+            <p><strong>Victoria:</strong> sobrevivir los tres minutos con el generador activo.</p>
+            <p><strong>Derrota:</strong> quedarse sin vida o dejar que falle el generador.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto escolar · La Última Estación · <span id="anio"></span></p>
+    </footer>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
