@@ -1,61 +1,36 @@
+{% extends "app1/componentes/plantillaP.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Última Estación</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <header>
-        <h1>La Última Estación</h1>
-        <nav>
-            <a href="{% url 'inicio' %}">Inicio</a>
-            <a href="{% url 'mecanicas' %}">Mecánicas</a>
-        </nav>
-    </header>
 
-    <main>
-        <section class="presentacion">
-            <h2>Sobre el juego</h2>
-            <p><strong>La Última Estación</strong> es un videojuego 2D (top-down) de terror y supervivencia. El jugador queda atrapado en una estación de metro abandonada y debe resistir durante tres minutos hasta que llegue el tren de rescate.</p>
-            <p>Para sobrevivir, tiene que explorar el andén, buscar recursos y mantener encendido el generador mientras evita a las criaturas que aparecen en la oscuridad.</p>
-        </section>
+{% block titulo %}Inicio - La Última Estación{% endblock %}
 
-        <section>
-            <h2>¿Dónde se desarrolla?</h2>
-            <p>La historia ocurre en un andén subterráneo oscuro y abandonado. La luz depende de un viejo generador, por eso conseguir gasolina y reparar sus fallas es fundamental.</p>
-        </section>
+{% block contenido %}
+<section class="presentacion">
+    <h2>Sobre el juego</h2>
+    <p><strong>La Última Estación</strong> es un videojuego 2D (vista desde arriba) de terror y supervivencia. El jugador queda atrapado en una estación de metro abandonada y debe resistir durante tres minutos hasta que llegue el tren de rescate.</p>
+    <p>Para sobrevivir, tiene que explorar el andén, buscar recursos y mantener encendido el generador mientras evita a las criaturas que aparecen en la oscuridad.</p>
+</section>
 
-        <section>
-            <h2>Desarrollo del proyecto</h2>
-            <p>El juego está pensado para PC. Según el guion, se desarrolla con HTML5 Canvas, JavaScript y CSS, y se planea usar NW.js para convertirlo en una aplicación de escritorio. Esta página informativa forma parte de un proyecto Django.</p>
-        </section>
+<section>
+    <h2>¿Dónde se desarrolla?</h2>
+    <p>La historia ocurre en un andén subterráneo oscuro y abandonado. La luz depende de un viejo generador, por eso conseguir gasolina y reparar sus fallas es fundamental.</p>
+</section>
 
-        <section>
-            <h2>Imágenes del juego</h2>
-            <p>Estas imágenes muestran distintas partes del juego.</p>
-            <div class="galeria">
-                <div class="imagen">
-                    <img src="{% static 'img/background-game.jpg' %}" alt="Espacio para la imagen del escenario">
-                    <p>Escenario del juego</p>
-                </div>
-                <div class="imagen">
-                    <img src="{% static 'img/menu-image.jpg' %}" alt="Espacio para la imagen del inicio en el tren">
-                    <p>Pantalla inicial con el tren</p>
-                </div>
-                <div class="imagen">
-                    <img src="{% static 'img/final-image.jpg' %}" alt="Espacio para la imagen del final del juego">
-                    <p>Pantalla final</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>Proyecto escolar · La Última Estación · <span id="anio"></span></p>
-    </footer>
-    <script src="{% static 'js/script.js' %}"></script>
-</body>
-</html>
+<section>
+    <h2>Imágenes del juego</h2>
+    <p>Estas imágenes muestran distintas partes del proyecto.</p>
+    <div class="galeria">
+        <div class="imagen">
+            <img src="{% static 'img/background-game.jpg' %}" alt="Escenario del juego">
+            <p>Escenario del juego</p>
+        </div>
+        <div class="imagen">
+            <img src="{% static 'img/menu-image.jpg' %}" alt="Pantalla inicial con el tren">
+            <p>Pantalla inicial con el tren</p>
+        </div>
+        <div class="imagen">
+            <img src="{% static 'img/final-image.jpg' %}" alt="Pantalla final del juego">
+            <p>Pantalla final</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

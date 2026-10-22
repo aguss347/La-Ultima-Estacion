@@ -1,2 +1,5 @@
-// Muestra el año actual en el pie de cada página.
-document.getElementById("anio").textContent = new Date().getFullYear();
+// Coloca el año actual en el pie de página.
+const elementoAnio = document.getElementById("anio");
+if (elementoAnio) {
+    elementoAnio.textContent = new Date().getFullYear();
+}

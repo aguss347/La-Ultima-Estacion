@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}La Última Estación{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>La Última Estación</h1>
+        {% include "app1/componentes/navbar.html" %}
+    </header>
+
+    <main>
+        {% block contenido %}{% endblock %}
+    </main>
+
+    {% include "app1/componentes/footer.html" %}
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
