@@ -130,3 +130,55 @@ footer {
         flex-direction: column;
     }
 }
+
+/* Sistema de usuarios */
+.auth-card {
+    max-width: 520px;
+    margin: 35px auto;
+}
+.auth-form p {
+    margin-bottom: 16px;
+}
+.auth-form label {
+    display: block;
+    margin-bottom: 6px;
+    color: #e6e6ed;
+}
+.auth-form input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #625783;
+    border-radius: 6px;
+    background: #171923;
+    color: #fff;
+}
+.auth-form ul {
+    color: #c9c4dc;
+    font-size: 0.9rem;
+}
+button {
+    border: 0;
+    border-radius: 6px;
+    padding: 10px 16px;
+    background: #8b72ce;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+button:hover {
+    background: #a78bfa;
+}
+.usuario-menu {
+    display: inline-block;
+    color: #f0c674;
+    margin: 5px 8px;
+}
+.form-logout {
+    display: inline-block;
+    margin: 5px;
+}
+.form-logout button {
+    padding: 7px 10px;
+    font-size: 0.9rem;
+}

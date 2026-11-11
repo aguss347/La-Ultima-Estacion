@@ -1,0 +1,14 @@
+{% extends "app1/componentes/plantillaP.html" %}
+{% block titulo %}Crear cuenta - La Última Estación{% endblock %}
+{% block contenido %}
+<section class="auth-card">
+    <h2>Crear una cuenta</h2>
+    <p>Registrate para entrar al sitio de La Última Estación.</p>
+    <form method="post" class="auth-form">
+        {% csrf_token %}
+        {{ formulario.as_p }}
+        <button type="submit">Registrarme</button>
+    </form>
+    <p>¿Ya tenés una cuenta? <a href="{% url 'login' %}">Iniciá sesión</a>.</p>
+</section>
+{% endblock %}

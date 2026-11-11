@@ -10,7 +10,14 @@
 <body>
     <header>
         <h1>La Última Estación</h1>
-        {% include "app1/componentes/navbar.html" %}
+        {% if request.user.is_authenticated %}
+            {% include "app1/componentes/navbar.html" %}
+        {% else %}
+            <nav aria-label="Acceso de usuarios">
+                <a href="{% url 'login' %}">Iniciar sesión</a>
+                <a href="{% url 'registro' %}">Registrarse</a>
+            </nav>
+        {% endif %}
     </header>
 
     <main>

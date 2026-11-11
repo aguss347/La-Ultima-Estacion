@@ -1,0 +1,35 @@
+SISTEMA DE USUARIOS - LA ÚLTIMA ESTACIÓN
+
+Qué se agregó:
+- Registro de usuarios.
+- Inicio y cierre de sesión.
+- Las páginas Inicio, Mecánicas, Desarrollo e Información requieren iniciar sesión.
+- Solo un superusuario puede descargar el PDF con la lista de usuarios registrados.
+- El PDF incluye nombre de usuario, correo, fecha de registro y si la cuenta es staff.
+
+CÓMO EJECUTAR EL PROYECTO
+
+1. Abrí una terminal en la carpeta donde está manage.py.
+2. Instalá las dependencias:
+   pip install -r requirements.txt
+3. Aplicá las migraciones:
+   python manage.py migrate
+4. Creá el superusuario:
+   python manage.py createsuperuser
+   Seguí las instrucciones para escribir usuario, correo (si lo pide) y contraseña.
+5. Iniciá el servidor:
+   python manage.py runserver
+6. Abrí http://127.0.0.1:8000/
+
+PRUEBA DEL SISTEMA
+
+- Entrá a /registro/ y creá una cuenta normal.
+- Comprobá que al cerrar sesión y tratar de abrir Inicio, Mecánicas, Desarrollo o Información, te pida iniciar sesión.
+- Entrá con el superusuario que creaste.
+- En el menú aparecerá "Descargar usuarios PDF". Al tocarlo se descargará usuarios_registrados.pdf.
+- También podés entrar a /admin/ para ver la administración de Django.
+
+IMPORTANTE
+- El superusuario se crea desde la terminal, no desde el formulario público de registro.
+- Guardá la contraseña del superusuario en un lugar seguro.
+- Este proyecto está configurado para desarrollo local; antes de publicarlo en internet hay que revisar la configuración de seguridad de Django.

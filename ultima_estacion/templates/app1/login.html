@@ -1,0 +1,14 @@
+{% extends "app1/componentes/plantillaP.html" %}
+{% block titulo %}Iniciar sesión - La Última Estación{% endblock %}
+{% block contenido %}
+<section class="auth-card">
+    <h2>Iniciar sesión</h2>
+    <p>Ingresá con tu usuario y contraseña para acceder al sitio.</p>
+    <form method="post" class="auth-form">
+        {% csrf_token %}
+        {{ formulario.as_p }}
+        <button type="submit">Entrar</button>
+    </form>
+    <p>¿Todavía no tenés cuenta? <a href="{% url 'registro' %}">Registrate acá</a>.</p>
+</section>
+{% endblock %}

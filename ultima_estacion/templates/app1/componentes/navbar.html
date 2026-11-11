@@ -2,5 +2,14 @@
     <a href="{% url 'inicio' %}">Inicio</a>
     <a href="{% url 'mecanicas' %}">Mecánicas</a>
     <a href="{% url 'pagina' %}">Desarrollo</a>
-    <a href="{% url 'contacto' %}">Contacto</a>
+    <a href="{% url 'contacto' %}">Información</a>
+    <span class="usuario-menu">Hola, {{ request.user.username }}</span>
+    {% if request.user.is_superuser %}
+        <a href="{% url 'usuarios_pdf' %}">Descargar usuarios PDF</a>
+        <a href="/admin/">Administración</a>
+    {% endif %}
+    <form class="form-logout" method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit">Cerrar sesión</button>
+    </form>
 </nav>
